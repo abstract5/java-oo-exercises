@@ -22,9 +22,53 @@ public class Robot {
 					   break;
 		case "West": this.xPos-=this.speed;
 					 break;
+		default: System.out.println("That is an invalid direction.");
+				 break;
 		}
 	}
 	
+	public void Rotate(String r) {
+		switch(r){
+		case "Right": if(this.direction == "North"){
+				this.direction = "East";
+				return;
+			}else if(this.direction == "East"){
+				this.direction = "South";
+				return;
+			}else if(this.direction == "South"){
+				this.direction = "West";
+				return;
+			}else if(this.direction == "West"){
+				this.direction = "North";
+				return;
+			}
+			break;
+		case "Left": if(this.direction == "North"){
+				this.direction = "West";
+				return;
+			}else if(this.direction == "East"){
+				this.direction = "North";
+				return;
+			}else if(this.direction == "South"){
+				this.direction = "East";
+				return;
+			}else if(this.direction == "West"){
+				this.direction = "South";
+				return;
+			}
+			break;
+		default: System.out.println("That is an invalid rotation direction.");
+		 		 break;
+		}
+	}
+	
+	public String Distance(Robot r){
+		double xDelta = Math.pow(this.xPos - r.getxPos(), 2);
+		double yDelta = Math.pow(this.yPos - r.getyPos(), 2);
+		double dist = Math.sqrt(xDelta + yDelta);
+		return this.name + " is " + dist + " units away from " + r.getName();
+	}
+
 	public String toString() {
 		return "Name: " + name + ", Position: " + "(" + xPos + ", " + yPos + "), " +
 				"Speed: " + speed + ", Direction: " + direction;
@@ -40,6 +84,14 @@ public class Robot {
 
 	public String getPos() {
 		return "(" + xPos + ", " + yPos + ")";
+	}
+	
+	public int getxPos() {
+		return xPos;
+	}
+
+	public int getyPos() {
+		return yPos;
 	}
 
 	public void setxPos(int xPos) {
