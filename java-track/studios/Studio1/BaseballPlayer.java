@@ -76,7 +76,7 @@ public class BaseballPlayer {
 
 	public static void main(String[] args) {
 		BaseballPlayer bP = new BaseballPlayer("Shane", "Right-handed", 12, 5, 17, 9);
-		System.out.println(bP.playedGame(12, 5));
+		System.out.println(bP.playedGame(13, 5));
 		System.out.println(bP.toString());
 	}
 
