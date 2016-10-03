@@ -1,11 +1,14 @@
 package RobotPrep;
 
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 public class RobotTest {
 
-	public static void main(String[] args) {
-		Robot r = new Robot("Chappy", 5, 5, 10, "North");
-		r.Rotate("down");
-		System.out.println(r.toString());
+	@Test
+	public void testRotate() {
+		fail("Not yet implemented");
 	}
 
 }

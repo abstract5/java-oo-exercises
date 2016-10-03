@@ -27,8 +27,8 @@ public class Robot {
 		}
 	}
 	
-	public void Rotate(String r) {
-		switch(r){
+	public void Rotate(String rotation) {
+		switch(rotation){
 		case "Right": if(this.direction == "North"){
 				this.direction = "East";
 				return;
@@ -112,5 +112,13 @@ public class Robot {
 
 	public String getName() {
 		return name;
+	}
+	
+	public static void main(String[] args) {
+		Robot r = new Robot("Chappy", 5, 5, 10, "North");
+		r.Rotate("Left");
+		r.Rotate("Left");
+		r.Move();
+		System.out.println(r.toString());
 	}
 }
