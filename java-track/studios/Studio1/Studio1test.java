@@ -48,8 +48,9 @@ public class Studio1test {
 	@Test
 	public void testSimplify(){
 		Fraction f = new Fraction(4, 12);
+		Fraction f2 = new Fraction(1, 3);
 		f.simplify();
-		assertTrue("Problem with simplify()", f.getNumerator() == 1 && f.getDenominator() == 3);
+		assertTrue("Problem with simplify()", f.isEqual(f2));
 	}
 	
 	@Test

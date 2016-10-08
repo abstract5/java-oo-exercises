@@ -51,6 +51,13 @@ public class Fraction {
 	public void getFraction(){
 		System.out.println(this.numerator+"/"+this.denominator);
 	}
+	
+	public boolean isEqual(Fraction f){
+		if(this.numerator == f.getNumerator() && this.denominator == f.getDenominator()){
+			return true;
+		}
+		return false;
+	}
 
 	public static void main(String[] args){
 		Fraction f1 = new Fraction(4, 12);

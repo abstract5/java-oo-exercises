@@ -62,11 +62,11 @@ public class Robot {
 		}
 	}
 	
-	public String Distance(Robot r){
+	public double Distance(Robot r){
 		double xDelta = Math.pow(this.xPos - r.getxPos(), 2);
 		double yDelta = Math.pow(this.yPos - r.getyPos(), 2);
 		double dist = Math.sqrt(xDelta + yDelta);
-		return this.name + " is " + dist + " units away from " + r.getName();
+		return dist;
 	}
 
 	public String toString() {
