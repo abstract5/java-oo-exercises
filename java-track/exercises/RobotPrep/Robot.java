@@ -29,7 +29,7 @@ public class Robot {
 	
 	public void Rotate(String rotation) {
 		switch(rotation){
-		case "Right": if(this.direction == "North"){
+		case "Right": if(this.direction.equals("North")){
 				this.direction = "East";
 				return;
 			}else if(this.direction == "East"){
@@ -43,7 +43,7 @@ public class Robot {
 				return;
 			}
 			break;
-		case "Left": if(this.direction == "North"){
+		case "Left": if(this.direction.equals("North")){
 				this.direction = "West";
 				return;
 			}else if(this.direction == "East"){

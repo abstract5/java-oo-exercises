@@ -28,7 +28,7 @@ public class Course {
 				this.roster[i] = s;
 				remainingSeats-=1;
 				return true;
-			}else if(this.roster[i].getName() == s.getName()){
+			}else if(this.roster[i].getName().equals(s.getName())){
 				return false;
 			}
 		}

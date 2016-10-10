@@ -44,20 +44,9 @@ public class Student {
 		}else if(this.credits < 15){
 			cpc = 1333.33;
 			return Math.round((cpc * this.credits) * 100.0)/100.0;
-		}else if(this.credits % 4 == 0){
-			return 16000.01 + (5333.32 * ((this.credits / 4) - 3));
-		}else if(this.credits == 26){
-			return 34666.63;
-		}else if(this.credits == 27){
-			return 35999.96;
-		}else if(this.credits == 28){
-			return 37333.29;
-		}else if(this.credits == 29){
-			return 38666.619999999995;
-		}
-		else{
+		}else{
 			cpc = 1333.33;
-			return Math.round((cpc * this.credits) * 100.0)/100.0 + 0.05;
+			return (cpc * (this.credits - 15) + 20000.0);
 		}
 	}
 	
