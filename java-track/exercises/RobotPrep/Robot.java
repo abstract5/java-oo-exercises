@@ -3,6 +3,7 @@ package RobotPrep;
 public class Robot {
 	private String name, direction;
 	private int xPos, yPos, speed;
+	private RoboBehaviours rb;
 	
 	public Robot(String name, int xPos, int yPos, int speed, String direction){
 		this.name = name;
@@ -28,8 +29,8 @@ public class Robot {
 	}
 	
 	public void Rotate(String rotation) {
-		switch(rotation){
-		case "Right": if(this.direction.equals("North")){
+		switch(rotation.toUpperCase()){
+		case "RIGHT": if(this.direction.equals("North")){
 				this.direction = "East";
 				return;
 			}else if(this.direction == "East"){
@@ -43,7 +44,7 @@ public class Robot {
 				return;
 			}
 			break;
-		case "Left": if(this.direction.equals("North")){
+		case "LEFT": if(this.direction.equals("North")){
 				this.direction = "West";
 				return;
 			}else if(this.direction == "East"){
@@ -67,6 +68,10 @@ public class Robot {
 		double yDelta = Math.pow(this.yPos - r.getyPos(), 2);
 		double dist = Math.sqrt(xDelta + yDelta);
 		return dist;
+	}
+	
+	public void setBehaviour(RoboBehaviours roBeh){
+		this.rb = roBeh;
 	}
 
 	public String toString() {

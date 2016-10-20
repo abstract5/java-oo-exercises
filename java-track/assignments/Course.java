@@ -17,7 +17,7 @@ public class Course {
 			if(this.roster[i] == null){
 				return ros;
 			}
-			ros+=this.roster[i].getName() + "; ";
+			ros+=this.roster[i].getName() + "\n";
 		}
 		return ros;
 	}
