@@ -7,11 +7,4 @@ public class AggressiveBehavior implements RoboBehaviours{
 		// TODO Auto-generated method stub
 		
 	}
-
-	@Override
-	public int checkStatus() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

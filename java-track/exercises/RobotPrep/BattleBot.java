@@ -12,7 +12,7 @@ public class BattleBot extends Robot{
 	
 	public void Attack(BattleBot r){
 		int damage = (int)Math.random()*5 +1;
-		System.out.println("The bot attacks with it's " + weapon + " and deals " + damage + "!");
+		System.out.println("The bot attacks with it's " + this.weapon + " and deals " + damage + "!");
 		r.setHealth(r.getHealth() - damage);
 	}
 
