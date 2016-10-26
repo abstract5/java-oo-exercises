@@ -289,10 +289,10 @@ public final class Picture implements ActionListener {
      * Tests this <tt>Picture</tt> data type. Reads a picture specified by the command-line argument,
      * and shows it in a window on the screen.
      */
-    public static void main(String[] args) {
-        Picture pic = new Picture(args[0]);
-        System.out.printf("%d-by-%d\n", pic.width(), pic.height());
-        pic.show();
-    }
+//    public static void main(String[] args) {
+//        Picture pic = new Picture(args[0]);
+//        System.out.printf("%d-by-%d\n", pic.width(), pic.height());
+//        pic.show();
+//    }
 
 }
